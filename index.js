@@ -1,3 +1,12 @@
+/**
+ * @INFO
+ * Bot Coded by </JohnDavid>#0009
+ * @INFO
+ * Work for Royal Development | https://discord.gg/naUJjDSf8E
+ * @INFO
+ * Please mention Him / Royal Development, when using this Code!
+ * @INFO
+ */
 const Discord = require('discord.js')
 const db = require('quick.db')
 const colors = require('./colors.json')
@@ -12,7 +21,7 @@ client.on('ready', () => {
     client.user.setActivity(``, { // Some status
         type: 'WATCHING'
     })
-    setInterval(() => client.user.setActivity(`devdark | ${client.users.cache.size} users`, {
+    setInterval(() => client.user.setActivity(`Royal Development | ${client.users.cache.size} users`, {
         type: 'PLAYING'
     }), 1000 * 60 * 2);
 })
@@ -63,7 +72,6 @@ client.on('guildMemberRemove', async member => {
 })
 
 client.on('message', async message => {
-
     const prefixMention = new RegExp(`^<@!?${client.user.id}> `);
     const prefix = message.content.match(prefixMention) ? message.content.match(prefixMention)[0] : '!' // The prefix <-- This bot also supports mention prefixes ;)
 
@@ -75,7 +83,6 @@ client.on('message', async message => {
         .setFooter(message.client.user.username, message.client.user.displayAvatarURL({
             dynamic: true
         }))
-
     if (message.mentions.users.has(message.client.user.id)) message.channel.send(`<@${message.author.id}>`, mentionEmbed)
 
     if (!message.content.startsWith(prefix)) return;
@@ -137,7 +144,30 @@ client.on('message', async message => {
             }
         })
     }
+if (command === 'help') {
+        if (!args.length) {
+            return message.channel.send({
+                embed: {
+                    title: 'Invite Tracker',
+                 
+                    description: `Invite Tracker is a powerful Discord bot which offers many features such as invite tracking, giveaways and more.
 
+[Support Server](https://discord.gg/9HFacfgX8U) - [Invite Me](https://discord.com/api/oauth2/authorize?client_id=830619461613518849&permissions=8&scope=bot)
+                    `,
+                    
+                    fields: [{
+                        name: '💪 Administration',
+                        value: '`cleardata`',
+                        inline: true
+                    }, {
+                        name: '📚 Genaral',
+                        value: '`leavechannel`, `leavemessage`, `joinchannel`, `joinmessage`'
+                    }],
+                    color: "BLUE"
+                }
+            })
+        }
+}
 
     if (command === 'joinmessage') {
         if (!args.length) {
@@ -199,7 +229,7 @@ client.on('message', async message => {
                 }],
                 timestamp: new Date(),
                 footer: {
-                    text: 'Custom Bots: https://discord.gg/M4Yj2Ay!',
+                    text: 'Custom Bots: https://discord.gg/9HFacfgX8U!',
                     icon_url: 'https://cdn.discordapp.com/icons/746891148043354152/a_05080a5b943e5ba88fbf884406b8d59e.gif?size=512'
                 },
                 color: 'RED'
@@ -213,7 +243,7 @@ client.on('message', async message => {
                 description: `Join channel set as: <#${Channel.id}>! All welcome messages will be redirected here. If this was a mistake, please configure it again`,
                 color: 'GREEN',
                 footer: {
-                    text: 'Custom Bots: https://discord.gg/M4Yj2Ay',
+                    text: 'Custom Bots: https://discord.gg/9HFacfgX8U',
                     icon_url: 'https://cdn.discordapp.com/icons/746891148043354152/a_05080a5b943e5ba88fbf884406b8d59e.gif?size=512'
                 },
                 timestamp: new Date()
@@ -233,7 +263,7 @@ client.on('message', async message => {
                 }],
                 timestamp: new Date(),
                 footer: {
-                    text: 'Custom Bots: https://discord.gg/M4Yj2Ay!',
+                    text: 'Custom Bots: https://discord.gg/9HFacfgX8U!',
                     icon_url: 'https://cdn.discordapp.com/icons/746891148043354152/a_05080a5b943e5ba88fbf884406b8d59e.gif?size=512'
                 },
                 color: 'RED'
@@ -247,7 +277,7 @@ client.on('message', async message => {
                 description: `Leave channel set as: <#${Channel.id}>! All leave messages will be redirected here. If this was a mistake, please configure it again`,
                 color: 'GREEN',
                 footer: {
-                    text: 'Custom Bots: https://discord.gg/M4Yj2Ay',
+                    text: 'Custom Bots: https://discord.gg/9HFacfgX8U',
                     icon_url: 'https://cdn.discordapp.com/icons/746891148043354152/a_05080a5b943e5ba88fbf884406b8d59e.gif?size=512'
                 },
                 timestamp: new Date()
@@ -432,4 +462,13 @@ client.on('message', async message => {
 
 })
 
-client.login('ODAzNjgzNDg0NTA1MDc5ODk4.YBBWkg.PS4xpMoYBELmuw7bvgbNStauO_A')
+client.login('your_token')
+/**
+ * @INFO
+ * Bot Coded by </JohnDavid>#0009
+ * @INFO
+ * Work for Royal Development | https://discord.gg/naUJjDSf8E
+ * @INFO
+ * Please mention Him / Royal Development, when using this Code!
+ * @INFO
+ */
