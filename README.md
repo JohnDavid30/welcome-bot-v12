@@ -1,9 +1,9 @@
 # welcome-bot-v12
 Coding by JohnDavid
 # How to Use
-!welchannel
+!joinchannel
 
-!welmessage
+!joinmessage
 
 !leavechannel
 
